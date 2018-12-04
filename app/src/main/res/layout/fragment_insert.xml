@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fragment_insert"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layoutDirection="rtl">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:orientation="horizontal"
+        android:id="@+id/search">
+        <TextView
+            android:id="@+id/search_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/droidkufi_regular"
+            android:text="اسم المشترك" />
+        <SearchView
+            android:id="@+id/name_search_view"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/search_name_tv"
+            android:layout_toEndOf="@+id/search_name_tv"
+            android:fontFamily="@font/droidkufi_regular" />
+        <TextView
+            android:id="@+id/building_no_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/name_search_view"
+            android:fontFamily="@font/droidkufi_regular"
+            android:text="رقم الاشتراك" />
+        <SearchView
+            android:id="@+id/building_no_sv"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/building_no_tv"
+            android:layout_toEndOf="@+id/building_no_tv"
+            android:fontFamily="@font/droidkufi_regular" />
+        <Button
+            android:id="@+id/btn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toEndOf="@+id/building_no_sv"
+            android:text="press" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/heder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/search"
+        android:background="#979797"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/no"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/droidkufi_regular"
+            android:padding="2dp"
+            android:text="رقم الاشتراك "
+            android:textAlignment="center"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/droidkufi_regular"
+            android:padding="2dp"
+            android:text="اسم المشترك"
+            android:textAlignment="center"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/building"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/droidkufi_regular"
+            android:padding="2dp"
+            android:text="مبنى"
+            android:textAlignment="center"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/location"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/droidkufi_regular"
+            android:padding="2dp"
+            android:text="الموقع"
+            android:textAlignment="center"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/street"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/droidkufi_regular"
+            android:padding="2dp"
+            android:text="رقم الشارع"
+            android:textAlignment="center"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/stat"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/droidkufi_regular"
+            android:padding="2dp"
+            android:text="حالة العداد"
+            android:textAlignment="center"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/pre_read"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/droidkufi_regular"
+            android:padding="2dp"
+            android:text="ق.السابقة"
+            android:textAlignment="center"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/pre_read_date"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/droidkufi_regular"
+            android:padding="2dp"
+            android:text="تاريخ ق.س"
+            android:textAlignment="center"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/current_read"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/droidkufi_regular"
+            android:padding="2dp"
+            android:text=" ق.الحالية"
+            android:textAlignment="center"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/current_read_date"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/droidkufi_regular"
+            android:padding="2dp"
+            android:text="تاريخ ق.ح"
+            android:textAlignment="center"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lst"
+        android:layout_below="@+id/heder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/list1">
+        </ListView>
+    </LinearLayout>
+
+</RelativeLayout>

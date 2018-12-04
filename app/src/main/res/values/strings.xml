@@ -1,0 +1,26 @@
+<resources fontFamily="@font/droidkufi_bold">
+    <string name="app_name">Bait</string>
+    <string name="logoName">Bait Lahia Municipality</string>
+
+    <string name="lUser">User Name</string>
+    <string name="lPass">Password</string>
+    <string name="hintUser">Enter user name</string>
+    <string name="hintPass">Enter Password</string>
+    <string name="btnLogin">Login</string>
+    <string name="title_activity_main">Main Screen</string>
+    <string name="navigation_drawer_open">Open </string>
+    <string name="navigation_drawer_close">Close </string>
+    <string name="nav_header_title">Bait Lahia Mun</string>
+    <string name="nav_header_subtitle">info@baitlahiamun.com</string>
+    <string name="nav_header_desc">anything</string>
+    <string name="action_settings">Settings</string>
+
+    <string-array name="meter_status" fontFamily="@font/droidkufi_bold">
+        <item>بحالة جيدة</item>
+        <item>عطلان</item>
+        <item>لا يوجد عداد</item>
+        <item>مقلوب </item>
+        <item>مغلق</item>
+    </string-array>
+
+</resources>

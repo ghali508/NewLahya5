@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layoutDirection="rtl">
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="0dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:fontFamily="@font/droidkufi_bold"
+        android:gravity="center"
+
+        android:text="بلدية بيت لاهيا"
+        android:textColor="#ff0000"
+        android:textSize="38dp" />
+
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv1"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="-16dp"
+        android:gravity="center"
+        android:text="حضارة ... تطوير... تنمية  "
+        android:fontFamily="@font/droidkufi_bold"
+
+        android:textColor="#00bc19"
+        android:textSize="18dp" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="186dp"
+        android:layout_below="@+id/tv1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        app:srcCompat="@drawable/logo" />
+    <TextView
+        android:id="@+id/luser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lUser"
+        android:textSize="20sp"
+        android:layout_below="@+id/logo"
+        android:textColor="@color/colorLable"
+        android:padding="3sp"
+        android:layout_marginStart="20sp"
+
+        android:layout_marginBottom="15dp"
+        android:fontFamily="@font/droidkufi_regular"/>
+
+    <EditText
+        android:id="@+id/userText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/luser"
+        android:layout_toEndOf="@+id/luser"
+        android:hint="@string/hintUser"
+        android:layout_alignBaseline="@+id/luser"
+        android:inputType="number"
+        android:fontFamily="@font/droidkufi_regular"
+
+        />
+    <TextView
+        android:id="@+id/lPass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lPass"
+        android:textSize="20sp"
+        android:layout_below="@+id/luser"
+        android:textColor="@color/colorLable"
+        android:padding="3sp"
+        android:layout_marginStart="15sp"
+        android:fontFamily="@font/droidkufi_regular"/>
+
+    <EditText
+        android:id="@+id/passText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/lPass"
+        android:layout_toEndOf="@+id/luser"
+        android:hint="@string/hintPass"
+        android:layout_alignBaseline="@+id/lPass"
+        android:inputType="number"
+        android:fontFamily="@font/droidkufi_regular"
+        />
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/passText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:text="@string/btnLogin"
+        android:textSize="20sp"
+        android:fontFamily="@font/droidkufi_regular"/>
+
+
+</RelativeLayout>

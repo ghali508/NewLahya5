@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">جديدبيت لاهيا</string>
+    <string name="logoName"> بلدية بيت لاهيا</string>
+
+    <string name="lUser">اسم المستخدم</string>
+    <string name="lPass">كلمة المرور</string>
+    <string name="hintUser">ادخل الرقم الوظيفي</string>
+    <string name="hintPass">ادخل كلمة السر</string>
+    <string name="btnLogin">تسجيل دخول</string>
+    <string name="title_activity_main">الشاشة الرئيسية</string>
+    <string name="navigation_drawer_open">فتح</string>
+    <string name="navigation_drawer_close">إغلاق</string>
+    <string name="nav_header_title">بلدية بيت لاهيا</string>
+    <string name="nav_header_subtitle">تنمية .. تطوير .. حضارة</string>
+    <string name="nav_header_desc">أي حاجة</string>
+    <string name="action_settings">إعدادات</string>
+
+    <string-array name="meter_status">
+        <item>بحالة جيدة</item>
+        <item>عطلان</item>
+        <item>لا يوجد عداد</item>
+        <item>مقلوب </item>
+        <item>مغلق</item>
+    </string-array>
+</resources>
