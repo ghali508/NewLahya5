@@ -37,14 +37,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new InsertFragment()).commit();
             navigationView.setCheckedItem(R.id.nav_download);
         }
-
-
-        try {
-            MySaxParser parser = new MySaxParser( getApplicationContext() );
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
     }
 
     @Override

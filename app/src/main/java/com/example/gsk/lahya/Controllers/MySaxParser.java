@@ -3,12 +3,16 @@ package com.example.gsk.lahya.Controllers;
 import android.content.Context;
 import android.os.Environment;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.example.gsk.lahya.model.Subscriber;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.List;
@@ -23,10 +27,9 @@ import org.xml.sax.helpers.DefaultHandler;
 
 public class MySaxParser {
 
-    public MySaxParser(Context context) throws IOException {
+    public MySaxParser(final Context context) throws IOException {
         final List<Subscriber> subscribers = new ArrayList<>();
-        File input = new File( Environment.getExternalStoragePublicDirectory( Environment.DIRECTORY_DOWNLOADS ).toString(), "READERSALLnew.xml" );
-
+        File input = new File( Environment.getExternalStoragePublicDirectory( Environment.DIRECTORY_DOWNLOADS ).toString(), "READERSALLnew_utf.xml" );
 
         try {
             SAXParserFactory factory = SAXParserFactory.newInstance();
@@ -51,7 +54,7 @@ public class MySaxParser {
 //                        subscriber.setIdAtt(attributes.getValue("xmlns"));
 //                    } else if (qName.equalsIgnoreCase("text")) {
 //                        subscriber.setTextAtt(attributes.getValue("xml:space"));
-                        str = new StringBuilder();
+                        str = new StringBuilder( );
                         validBuffer = 1;
                     }
                 }
@@ -59,14 +62,15 @@ public class MySaxParser {
                 @Override
                 public void endElement(String arg0, String arg1, String qName) throws SAXException {
                     if (qName.equalsIgnoreCase( "MAN_SERVICE_NO" )) {
-                        subscriber.setSubNo( textContent );
+                        subscriber.setSubNo( str.toString() );
                     } else if (qName.equalsIgnoreCase( "LOACTION_ID" )) {
-                        subscriber.setLocationNo( textContent );
+                        subscriber.setLocationNo( str.toString() );
                     } else if (qName.equalsIgnoreCase( "CUST_NAME" )) {
-                        subscriber.setSubName( textContent );
+                        subscriber.setSubName( str.toString() );
                     } else if (qName.equalsIgnoreCase( "SVTYPE" )) {
-                        subscriber.setStatus( textContent );
+                        subscriber.setStatus( str.toString() );
                     } else if (qName.equalsIgnoreCase( "G_ACT_NO" )) {
+//                        Toast.makeText( context ,subscriber.toString(),Toast.LENGTH_LONG ).show();
                         subscribers.add( subscriber );
                     }
                 }
@@ -83,8 +87,9 @@ public class MySaxParser {
             } );
 
 
+
             for (Subscriber sub : subscribers) {
-                System.out.println(sub);
+//                System.out.println(sub);
                 Log.d("ttt",sub.getSubNo()+"   "+sub.getSubName()+"  "+sub.getStatus()+"   "+sub.getLocationNo()+"");
             }
         } catch (IOException e) {
