@@ -11,7 +11,6 @@ import io.realm.annotations.PrimaryKey;
 public class Subscriber extends RealmObject implements Serializable {
     @PrimaryKey
     private String subNo;
-
     private String subName;
     private String buildingNo;
     private String locationNo;
@@ -21,6 +20,7 @@ public class Subscriber extends RealmObject implements Serializable {
     private String preReadingDate;
     private String currentReading;
     private String currentReadingDate;
+    private String regionCode ;
 
     public Subscriber() {
     }
@@ -116,6 +116,14 @@ public class Subscriber extends RealmObject implements Serializable {
 
     public void setCurrentReadingDate(String currentReadingDate) {
         this.currentReadingDate = currentReadingDate;
+    }
+
+    public String getRegionCode() {
+        return regionCode;
+    }
+
+    public void setRegionCode(String regionCode) {
+        this.regionCode = regionCode;
     }
 
     @Override

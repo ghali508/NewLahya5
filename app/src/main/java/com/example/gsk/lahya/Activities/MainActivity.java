@@ -10,8 +10,11 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.example.gsk.lahya.Controllers.MySaxParser;
 import com.example.gsk.lahya.fragments.*;
 import com.example.gsk.lahya.R;
+
+import java.io.IOException;
 
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -33,6 +36,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new InsertFragment()).commit();
             navigationView.setCheckedItem(R.id.nav_download);
+        }
+
+
+        try {
+            MySaxParser parser = new MySaxParser( getApplicationContext() );
+
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 
